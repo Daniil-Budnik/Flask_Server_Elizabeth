@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {%  include 'Include/Head.html' %}
+</head>
+<header>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <a href="/" class="my-0 mr-md-auto font-weight-normal navbar-brand">Сайтик Елизаветы Григорьевы</a>
+        <nav class="my-2 my-md-0 mr-md-3">
+        </nav>
+        <a class="btn btn-outline-primary mr-2" href="Authorization">{{ B1}}</a>
+        <a class="btn btn-outline-primary" href="Registration">{{ B2 }}</a>
+    </div>
+</header>
+
+<body class="text-center container">
+    <form action="/Registration" method="post" class="form-signin mt-5">
+        {% for SMS_CSS, SMS in get_flashed_messages(True) %}
+        <p class="lead {{SMS_CSS}}">{{ SMS }}</p>
+        {% endfor %}
+        <h1 class="h3 mb-3 font-weight-normal mt-5">Регистрация</h1>
+        <input type="text" name="login" class="form-control mt-5" placeholder="Логин" required>
+        <input type="text" name="name" class="form-control mt-1" placeholder="Ваше имя" required>
+        <input type="password" name="pass1" class="form-control mt-1" placeholder="Пароль" required>
+        <input type="password" name="pass2" class="form-control mt-1" placeholder="Повторите пароль" required>
+        <button class="btn btn-lg btn-primary btn-block mt-5" type="submit">Регистрация</button>
+    </form>
+</body>
+
+<footer> {%  include 'Include/Footer.html' %}  </footer>
+</html>
+
