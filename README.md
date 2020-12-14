@@ -1,1 +1,2 @@
-# Flask_Server_Elizabeth
+# Flask Server Elizabeth
+Тестовый сервер на Python Flask про котят :)
