@@ -14,4 +14,4 @@
 ![alt tag](https://github.com/PC-SET/Flask_Server_Elizabeth/blob/main/Scren/I%20(5).jpg?raw=true "")​
 
     Простой пример профиля на сайте
-![alt tag](https://github.com/PC-SET/Flask_Server_Elizabeth/blob/main/Scren/I%20(1).jpg?raw=true "")​
+![alt tag](https://github.com/PC-SET/Flask_Server_Elizabeth/blob/main/Scren/I%20(2).jpg?raw=true "")​
