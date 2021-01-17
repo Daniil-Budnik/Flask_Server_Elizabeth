@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="MyDataBase.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Server_Elizabeth.py" />
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +41,7 @@
     <Content Include="templates\403.html" />
     <Content Include="templates\404.html" />
     <Content Include="templates\Aut.html" />
+    <Content Include="templates\Header.html" />
     <Content Include="templates\Include\Footer.html" />
     <Content Include="templates\Include\Head.html" />
     <Content Include="templates\index.html" />

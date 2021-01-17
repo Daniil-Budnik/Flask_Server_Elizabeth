@@ -4,29 +4,23 @@
     {%  include 'Include/Head.html' %}
 </head>
 <header>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-        <a href="/" class="my-0 mr-md-auto font-weight-normal navbar-brand">Сайтик Елизаветы Григорьевы</a>
-        <nav class="my-2 my-md-0 mr-md-3">
-        </nav>
-        <a class="btn btn-outline-primary mr-2" href="Authorization">{{ B1}}</a>
-        <a class="btn btn-outline-primary" href="Registration">{{ B2 }}</a>
-    </div>
+    {%  include 'Header.html' %}
 </header>
 
 <body class=" container pl-4">
    
-    <form action="/Result" method="post" >
+    <form action="/Result" method="post">
         {% for I in range(1,7) %}
         <p class="lead mt-5">{{ TEST[I][1] }}</p>
-        <input class="ml-5 pl-2" type="checkbox" value="1" name="{{TEST[I][0]}}">  {{TEST[I][2]}}</input><br />
-        <input class="ml-5 pl-2" type="checkbox" value="2" name="{{TEST[I][0]}}">  {{TEST[I][3]}}</input><br />
-        <input class="ml-5 pl-2" type="checkbox" value="3" name="{{TEST[I][0]}}">  {{TEST[I][4]}}</input><br />
-        <input class="ml-5 pl-2" type="checkbox" value="4" name="{{TEST[I][0]}}">  {{TEST[I][5]}}</input><br />
+        <p class="ml-5 pl-2"><input checked  type="radio" value="1" name="{{TEST[I][0]}}">  {{TEST[I][2]}}</p>
+        <p class="ml-5 pl-2"><input  type="radio" value="2" name="{{TEST[I][0]}}">  {{TEST[I][3]}}</p>
+        <p class="ml-5 pl-2"><input  type="radio" value="3" name="{{TEST[I][0]}}">  {{TEST[I][4]}}</p>
+        <p class="ml-5 pl-2"><input  type="radio" value="4" name="{{TEST[I][0]}}">  {{TEST[I][5]}}</p>
 
-        <img class=" text-center border border-primary ml-md-5 mt-5" width="600" height="400" src={{ url_for('static', filename= TEST[I][0] +'.jpg')}} )
-        <hr>
-        {% endfor %}
-        <button class="btn btn-lg btn-primary btn-block mt-5" type="submit">Закончить тест</button>
+            <img class=" text-center border border-primary ml-md-5 mt-5" width="600" height="400" src={{ url_for('static', filename= TEST[I][0] +'.jpg')}} )
+            <hr>
+            {% endfor %}
+            <button class="btn btn-lg btn-primary btn-block mt-5" type="submit">Закончить тест</button>
     </form>
 </body>
 
